@@ -14,12 +14,13 @@
 </head>
 <body>
     <!-- navbar -->
+    <div class="sticky-nav">
     <div class="container">
     <div class="navbar">
         <div class="navbar_s1">
             <img src="image/logo.svg" alt="">
         </div>
-        <div class="navbar_s2">
+        <div class="navbar_s2" id="navbar_s2">
             <i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" placeholder="search for anything">
         </div>
@@ -39,17 +40,32 @@
         </div>
     </div>
     </div>
+    </div>
     <!-- search sec -->
     <div class="container">
          <div class="search-head">
+            <div id="search" class="tabcontent">
             <h1>Where to?</h1>
+            </div>
+            <div id="hotel" class="tabcontent">
+                <h1>Stay somewhere great</h1>
+            </div>
+            <div id="do" class="tabcontent">
+                <h1>Do something fun</h1>
+            </div>
+            <div id="rest" class="tabcontent">
+                <h1>Find places to eat</h1>
+            </div>
+            <div id="holiday" class="tabcontent">
+                <h1>Explore places to rent</h1>
+            </div>
          </div>
           <div class="tab-sec">
-            <span><a href="#"><i class="fa-solid fa-house"></i> Search all</a></span>
-            <span><a href="#"><i class="fa-solid fa-bed"></i> Hotels</a></span>
-            <span><a href="#"><i class="fa-solid fa-tag"></i> Things to Do</a></span>
-            <span><a href="#"><i class="fa-solid fa-utensils"></i> Restaurants</a></span>
-            <span><a href="#"><i class="fa-solid fa-house-user"></i> Holiday Homes</a></span>
+            <span><a href="#search" id="tablinks" onclick="openCity(event, 'search')"><i class="fa-solid fa-house"></i> Search all</a></span>
+            <span><a href="#hotel" id="tablinks" onclick="openCity(event, 'hotel')"><i class="fa-solid fa-bed"></i> Hotels</a></span>
+            <span><a href="#do" id="tablinks" onclick="openCity(event, 'do')"><i class="fa-solid fa-tag"></i> Things to Do</a></span>
+            <span><a href="#rest" id="tablinks" onclick="openCity(event, 'rest')"><i class="fa-solid fa-utensils"></i> Restaurants</a></span>
+            <span><a href="#holiday" id="tablinks" onclick="openCity(event, 'holiday')"><i class="fa-solid fa-house-user"></i> Holiday Homes</a></span>
           </div>
           <div class="search-sec">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -463,5 +479,31 @@
     </div>
 </div>
 
+
+<script>
+    window.onscroll = function () { myFunction() };
+
+        function myFunction() {
+            if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+                document.getElementsById("navbar_s2").display = "block !important";
+            } else {
+                document.getElementsById("navbar_s2").display = "none";
+            }
+        }
+    function openCity(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementById("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+        
+    }
+</script>
 </body>
 </html>
