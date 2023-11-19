@@ -4,5 +4,546 @@
 }
 
 body {
-    font-family: 'Gabarito', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    padding: 0 8%;
+}
+.navbar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+        flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
+}
+.navbar_s1 img{
+    width: 188px;
+}
+.navbar_s2 {
+    padding: 10px;
+    border: 1px solid #000;
+    width: 20%;
+    border-radius: 20px;
+    display: flex;
+    gap: 10px;
+    display: none;
+}
+
+.navbar_s2 input {
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.navbar_s2 input:focus {
+    border: none;
+    outline: none;
+}
+.navbar_s3 ul{
+        list-style: none;
+        display: flex;
+            flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        font-weight: bold;
+        font-size: 15px;
+        
+}
+.navbar_s3 ul li{
+    padding: 7px 10px;
+    cursor: pointer;
+}
+.navbar_s3 li:nth-child(odd):hover{
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding: 7px 10px;
+    color: #333;
+}
+.navbar_s3 li:nth-child(even):hover {
+    border-bottom: 1px solid #000;
+    padding: 7px 10px;
+    color: #333;
+}
+.navbar_s4 .sign-btn{
+     background-color: #000;
+     color: #fff;
+     padding: 10px 16px;
+     border-radius: 20px;
+     font-weight: bold;
+     border: none;
+     font-size: 16px;
+}
+.sign-btn:hover{
+    background-color: #333;
+}
+.search-head h1{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 50px;
+    font-weight: bold;
+}
+.tab-sec{
+    display: flex;
+        flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0;
+}
+.tab-sec a{
+    color: #000;
+    font-weight: 600;
+    margin-right: 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+.search-sec{
+    width: 70%;
+    margin: 0 auto 2em;
+    position: relative;
+}
+.search-sec input{
+    border: 2px solid #e0e0e0;
+    width: 100%;
+        height: 50px;
+            border-radius: 30px;
+            padding-left: 4em;
+}
+.search-btn{
+    background-color: #34e0a1;
+    color: #000;
+    padding: 8px 14px;
+    border: 1px solid #34e0a1;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    position: absolute;
+    right: 0.7em;
+        top: 0.4em;
+}
+.search-sec i{
+        position: absolute;
+            left: 1em;
+            font-size: 20px;
+            top: 0.9em;
+}
+.img-sec{
+position: relative;
+}
+.img-sec img{
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.guide-text{
+    position: absolute;
+    padding: 30px;
+    width: 100%;
+    color: #fff;
+    z-index: 1;
+    bottom: 0.5em;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 20px 20px;
+    box-sizing: border-box;
+}
+.guide-text p{
+    margin-bottom: 1.5em;
+}
+
+.guide-btn{
+    background-color: #fff;
+    border-radius: 24px;
+        padding: 14px 24px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 2em;
+}
+.guide-btn:hover{
+    background-color: #f2f2f2;
+    transition: 1s;
+}
+/* trip sec */
+.trip-sec{
+    display: flex;
+        flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 3em;
+}
+.trip-sec a{
+    color: #333;
+    font-weight: 600;
+}
+.trip-card-sec{
+    display: flex;
+        flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1em;
+}
+.trip-card-sec .card{
+    width: 24%;
+    position: relative;
+}
+.trip-card-sec .card img{
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.trip-card-sec .card img:hover {
+    opacity: 0.9;
+}
+.trip-card-sec .card-text{
+        position: absolute;
+        width: 100%;
+        bottom: 0.4em;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 0 0 10px 10px;
+}
+.circle-box i{
+    color: #00aa6c;
+    font-size: 12px;
+}
+.circle-no{
+    font-size: 12px;
+    color: #333;
+    margin-left: 10px;
+}
+.circle-para{
+    color: #000;
+    font-weight: 600;
+    font-size: 12px;
+}
+.circle-para span{
+    font-weight: 900;
+}
+.rental-sec{
+    align-items: start;
+}
+.rental-sec .card-img img{
+    height: 200px;
+}
+.rental-sec .card-bottom-text p{
+    font-size: 13px;
+    font-weight: bold;
+}
+.card-favourite{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+.card-favourite i{
+        background: #fff;
+        padding: 10px;
+        border-radius: 30px;
+}
+.about-sec{
+    display: flex;
+    height: 180px;
+    margin-top: 2em;
+}
+.about-text{
+    background-color: #FFCCCC;
+    padding: 20px;
+    width: 50%;
+    box-sizing: border-box;
+}
+.about-text p{
+    margin-bottom: 1em;
+}
+.about-text a{
+    background-color: #000;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.about-img{
+    width: 50%;
+}
+.about-img img{
+    width: 100%;
+    height: 100%;
+}
+.explore-sec{
+    background-color: #FAF1ED;
+    padding: 2em 0;
+    margin: 2em 0 1em;
+}
+.explore-sec .trip-sec{
+    margin-top: 0;
+}
+.explore-sec .trip-card-sec .card{
+    width: 32%;
+}
+.explore-sec .card-bottom-text p{
+    text-align: center;
+}
+.explore-sec .card-bottom-text a{
+     text-decoration: none;
+     text-align: center;
+     color: #000;
+     font-size: 17px;
+     font-weight: bold;
+}
+.explore-sec .card-bottom-text a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+.explore-sec .trip-card-sec .card img{
+    height: 250px;
+
+}
+.bottom-sec{
+    background-color:#FFF7E1;
+    margin-top: 2em;
+}
+.travel-sec{
+    display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+}
+.travel-text{
+    width: 40%;
+}
+.travel-text h2{
+    font-size: 50px;
+}
+.travel-text p{
+    font-size: 20px;
+    margin-bottom: 1em;
+}
+.travel-text a {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+.travel-img-sec{
+    width: 60%;
+}
+.travel-img-sec img{
+    width: 100%;
+}
+.footer-sec{
+    background-color: #FAF1ED;
+    margin-top: 2em;
+}
+.footer-sec .container{
+    padding-top: 32px;
+    display: flex;
+        flex-wrap: wrap;
+}
+.footer-sec ul{
+    list-style: none;
+}
+.footer-sec p{
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+.footer-sec1,.footer-sec2{
+    width: 15%;
+}
+.footer-sec3,
+.footer-sec4 {
+    width: 35%;
+}
+.footer-sec li{
+    font-size: 13px;
+    padding-bottom: 5px;
+}
+.footer-sec li a{
+    text-decoration: none;
+    color: #333;
+}
+.copyright-sec{
+    background-color: #FAF1ED;
+    padding: 20px 0 30px;
+}
+.copy-right-sec1{
+    display: flex;
+        flex-wrap: wrap;
+    justify-content: space-between;
+}
+.copy-text{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+        flex-wrap: wrap;
+}
+.copy-text img{
+    height: 40px;
+    width: 40px;
+    margin-right: 16px;
+}
+.url-sec p{
+   font-size: 12px;
+}
+.url-sec a{
+    color: #333;
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 15px
+}
+.copy-para a{
+    font-weight: bold;
+    font-size: 12px;
+}
+.copy-para{
+    margin-top: 10px;
+}
+.input-sec select{
+        width: 150px;
+        padding: 7px 15px 7px 10px;
+        font-weight: bold;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        font-size: 15px;
+    
+}
+.input-sec ul{
+    list-style: none;
+    display: flex;
+        flex-wrap: wrap;
+    justify-content: end;
+    gap: 20px;
+    margin-top: 1em;
+}
+.input-sec ul a{
+    color: #000;
+        font-size: 20px;
+}
+.navbar_s5{
+    display: none;
+}
+@media screen and (min-width:280px) and (max-width:767px){
+    .container{
+        padding: 0 5%;
+    }
+    .navbar_s3{
+        display: none;
+    }
+    .navbar_s5{
+        display: block;
+    }
+        .navbar_s1 img{
+            width: 100px;
+        }
+                .navbar_s4 .sign-btn{
+                    display: none;
+                }
+   .search-head h1{
+    font-size: 30px;
+   }
+   .tab-sec a{
+    font-size: 15px;
+    margin-right: 20px;
+   }
+   .tab-sec{
+        display: inline-grid;
+   }
+   .search-sec{
+    width: 100%;
+   }
+   .trip-card-sec .card{
+    flex-basis: 47%;
+   }
+   .about-sec{
+    height: auto;
+    display: block;
+   }
+   .about-text,.about-img{
+    width: 100%;
+   }
+   .explore-sec .trip-card-sec .card{
+    flex-basis: 90%;
+   }
+   .rental-sec .card-img img{
+    height: 150px;
+   }
+   .travel-sec{
+    display: block;
+   }
+   .travel-text,.travel-img-sec{
+    width: 90%;
+    margin-top: 1em;
+   }
+   .travel-text img{
+    padding-top: 10px;
+   }
+   .travel-text h2{
+    font-size: 30px;
+   }
+   .footer-sec1,
+   .footer-sec2,.footer-sec3,
+.footer-sec4{
+    flex-basis: 50%;
+   }
+   .url-sec a{
+    font-size: 13px;
+   }
+   .copy-para{
+    margin-bottom: 10px;
+   }
+   .input-sec ul{
+    justify-content: start;
+   }
+}
+   @media screen and (min-width:768px) and (max-width:1024px) {
+    .container {
+            padding: 0 6%;
+        }
+    .tab-sec a{
+        font-size: 16px;
+    }
+        .trip-card-sec .card{
+            flex-basis: 30%;
+        }
+    .about-sec{
+        height: 200px;
+    }
+    .explore-sec .trip-card-sec .card img{
+            height: 200px;
+        }
+        .travel-sec{
+            flex-basis: 40%;
+        }
+        .travel-text h2{
+            font-size: 30px;
+        }
+                .bottom-sec{
+                    padding-bottom: 1.5em;
+                }
+        .travel-text img{
+            padding-top: 10px;
+        }
+        .footer-sec1,
+        .footer-sec2
+         {
+            flex-basis: 20%;
+        }
+                .footer-sec3,
+                .footer-sec4{
+                flex-basis: 30%;
+                }
+     .input-sec{
+        margin-top: 10px;
+     }
+         .input-sec ul{
+            justify-content: start;
+         }
 }
